@@ -62,14 +62,15 @@
             TEST_VAR = "test";
 
             # Setup external datasources
-            shellHook = ''
-              mkdir -p data
-              ln -snf ${tennis-data}/atp_matches_2020.csv data/dataset.csv
-            '';
+            # shellHook = ''
+            # '';
 
             # Define Python venv
             venvDir = ".venv";
             postShellHook = ''
+              mkdir -p data
+              ln -snf ${tennis-data}/atp_matches_2020.csv data/dataset.csv
+
               pip install --upgrade pip
               pip install opencv-python -U
               pip install django -U
