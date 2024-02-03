@@ -72,9 +72,7 @@
               ln -snf ${tennis-data}/atp_matches_2020.csv data/dataset.csv
 
               pip install --upgrade pip
-              pip install opencv-python -U
-              pip install django -U
-              pip install django-bootstrap5 -U
+              poetry update
             '';
           };
 
